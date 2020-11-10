@@ -10,16 +10,7 @@
     <body onload="brython()">
         <button id="button_alert">testing alert</button>
     
-    <script type="text/python">
-    from browser import document , alert
-    
-    document <= "Hello !"
-
-    def hello(ev):
-       alert("Hello !")
-
-    document["button_alert"].bind("click", hello)
-    </script>
+    <script type="text/python" src="test.py"></script>
     
     
     </body>
