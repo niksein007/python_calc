@@ -1,6 +1,6 @@
 from browser import document , alert
     
-document <= "Hello !"
+document <= "Hello mark!"
 
 def hello(ev):
    alert("Hello !")
