@@ -1,0 +1,14 @@
+body{
+    background-color: azure;
+    /* color: rgb(27, 26, 25); */
+}
+
+.calculator{
+    width: 50vw;
+
+    border: 2px solid black;
+}
+#display{
+    height: 50px;
+    background-color: rgb(178, 178, 199);
+}
