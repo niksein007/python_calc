@@ -1,14 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-color: azure;
+    margin: 0;
+    padding: 0;
+    
     /* color: rgb(27, 26, 25); */
 }
 
+/* .calculator{
+    width: 50vw;
+    margin: auto;
+    height: 75vh;
+    padding: 0;
+
+    border: 1px solid black;
+} */
+#display{
+    height: 60px;
+    background-color: rgb(178, 178, 199);
+
+}
+
+#display{grid-area: display;}
+#btn_dot{grid-area: dot;}
+#btn0{grid-area: zero;}
+#btn1{grid-area: one;}
+#btn2{grid-area: two;}
+#btn3{grid-area: three;}
+#btn4{grid-area: four;}
+#btn5{grid-area: five;}
+#btn6{grid-area: six;}
+#btn7{grid-area: seven;}
+#btn8{grid-area: eight;}
+#btn9{grid-area: nine;}
+#btn_minus{grid-area: minus;}
+#btn_plus{grid-area: plus;}
+#btn_divide{grid-area: divide;}
+#btn_multiply{grid-area: multiply;}
+#btn_equals{grid-area: equals;}
+#btnc{grid-area: cancel;}
+#btnDel{grid-area: del;}
+
 .calculator{
     width: 50vw;
-
-    border: 2px solid black;
-}
-#display{
-    height: 50px;
-    background-color: rgb(178, 178, 199);
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    'display display display display'
+    'one two three cancel '
+    'four five six divide ' 
+    'seven eight nine multiply'
+    'del zero plus minus'
+    'del dot plus equals'
+    ;
 }

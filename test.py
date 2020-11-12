@@ -44,20 +44,37 @@ def logic(ev):
                   display.text = ''
                display.text += btn_value
            
-  
-
-
-
-### creating the calculate  function
-def calculate (ev):
-   """ calculations """
-   logic(ev)
-
+  #####use dictionary to make the code smaller 
 
 for item in list:
-   button = html.BUTTON(item,id=item)
-   button.bind('click',logic)
-   button_list.append(button)
+   if item == '.':  ### to allow manipulation of . in css
+      button = html.BUTTON(item,id='btn_dot' )
+      button.bind('click',logic)
+      button_list.append(button)
+   elif item == '-':  ### to allow manipulation of . in css
+      button = html.BUTTON(item,id='btn_minus' )
+      button.bind('click',logic)
+      button_list.append(button)
+   elif item == '+':  ### to allow manipulation of . in css
+      button = html.BUTTON(item,id='btn_plus' )
+      button.bind('click',logic)
+      button_list.append(button)
+   elif item == '/':  ### to allow manipulation of . in css
+      button = html.BUTTON(item,id='btn_divide' )
+      button.bind('click',logic)
+      button_list.append(button)
+   elif item == '*':  ### to allow manipulation of . in css
+      button = html.BUTTON(item,id='btn_multiply' )
+      button.bind('click',logic)
+      button_list.append(button)
+   elif item == '=':  ### to allow manipulation of . in css
+      button = html.BUTTON(item,id='btn_equals' )
+      button.bind('click',logic)
+      button_list.append(button)
+   else:
+      button = html.BUTTON(item,id='btn' + item )
+      button.bind('click',logic)
+      button_list.append(button)
 
 ### add buttons to calculator div which includes the display div
 calculator <= button_list 
