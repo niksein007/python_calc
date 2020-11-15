@@ -10,14 +10,6 @@ body{
     /* color: rgb(27, 26, 25); */
 }
 
-/* .calculator{
-    width: 50vw;
-    margin: auto;
-    height: 75vh;
-    padding: 0;
-
-    border: 1px solid black;
-} */
 #display{
     height: 60px;
     background-color: rgb(178, 178, 199);
@@ -26,27 +18,27 @@ body{
 
 #display{grid-area: display;}
 #btn_dot{grid-area: dot;}
-#btn0{grid-area: zero;}
-#btn1{grid-area: one;}
-#btn2{grid-area: two;}
-#btn3{grid-area: three;}
-#btn4{grid-area: four;}
-#btn5{grid-area: five;}
-#btn6{grid-area: six;}
-#btn7{grid-area: seven;}
-#btn8{grid-area: eight;}
-#btn9{grid-area: nine;}
+#btn_zero{grid-area: zero;}
+#btn_one{grid-area: one;}
+#btn_two{grid-area: two;}
+#btn_three{grid-area: three;}
+#btn_four{grid-area: four;}
+#btn_five{grid-area: five;}
+#btn_six{grid-area: six;}
+#btn_seven{grid-area: seven;}
+#btn_eight{grid-area: eight;}
+#btn_nine{grid-area: nine;}
 #btn_minus{grid-area: minus;}
 #btn_plus{grid-area: plus;}
 #btn_divide{grid-area: divide;}
 #btn_multiply{grid-area: multiply;}
 #btn_equals{grid-area: equals;}
-#btnc{grid-area: cancel;}
-#btnDel{grid-area: del;}
+#btn_cancel{grid-area: cancel;}
+#btn_delete{grid-area: del;}
 
 .calculator{
-    width: 50vw;
-    /* height: 45vh; */
+    width: 200px;
+    height: 300px;
     margin: auto;
     display: grid;
     grid-template-areas: 

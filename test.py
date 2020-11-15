@@ -2,9 +2,17 @@ from browser import document , alert, html
 
 calculator = document['calculator']
 
-display = html.DIV('',id='display')#create div to display result
-list = ['.','0','1','2','3','4','5','6','7','8','9','-','+','/','*','=','c','Del'] #make a string list of cal buttons
-button_list = [display] #put display first to aviod the btns showing as elements
+#create div to display result
+display = html.DIV('',id='display')
+
+### a disctionary to hold all the buttons and their values
+btns_dict = {"dot":".","zero":"0","one":"1","two":"2","three":"3",
+"four":"4","five":"5","six":"6","seven":"7","eight":"8","nine":"9",
+"minus":"-","plus":"+","divide":"/","multiply":"*","equals":"=",
+"cancle":"c","delete":"Del"} #make a string list of cal buttons
+
+#put display first to aviod the btns showing as elements
+output_list = [display] 
 
 
 ###creating the logic function
@@ -23,7 +31,6 @@ def logic(ev):
    elif btn_value == 'Del':
      display.text = display.text[:-1] ### slice off all chars except the last char
 
-      
    elif btn_value == '=':
       if (display.text == '') or (display.text == msg1) \
       or (display.text == '*')  or (display.text == '-') \
@@ -44,38 +51,13 @@ def logic(ev):
                   display.text = ''
                display.text += btn_value
            
-  #####use dictionary to make the code smaller 
-
-for item in list:
-   if item == '.':  ### to allow manipulation of . in css
-      button = html.BUTTON(item,id='btn_dot' )
-      button.bind('click',logic)
-      button_list.append(button)
-   elif item == '-':  ### to allow manipulation of . in css
-      button = html.BUTTON(item,id='btn_minus' )
-      button.bind('click',logic)
-      button_list.append(button)
-   elif item == '+':  ### to allow manipulation of . in css
-      button = html.BUTTON(item,id='btn_plus' )
-      button.bind('click',logic)
-      button_list.append(button)
-   elif item == '/':  ### to allow manipulation of . in css
-      button = html.BUTTON(item,id='btn_divide' )
-      button.bind('click',logic)
-      button_list.append(button)
-   elif item == '*':  ### to allow manipulation of . in css
-      button = html.BUTTON(item,id='btn_multiply' )
-      button.bind('click',logic)
-      button_list.append(button)
-   elif item == '=':  ### to allow manipulation of . in css
-      button = html.BUTTON(item,id='btn_equals' )
-      button.bind('click',logic)
-      button_list.append(button)
-   else:
-      button = html.BUTTON(item,id='btn' + item )
-      button.bind('click',logic)
-      button_list.append(button)
+###loop through the dict and bind to click event
+### add them to the output_list
+for key, value in btns_dict.items():
+   button = html.BUTTON(value,id='btn_' + key )
+   button.bind('click',logic)
+   output_list.append(button)
 
 ### add buttons to calculator div which includes the display div
-calculator <= button_list 
+calculator <= output_list 
 # document <= button
