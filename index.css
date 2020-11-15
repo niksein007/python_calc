@@ -46,6 +46,7 @@ body{
 
 .calculator{
     width: 50vw;
+    /* height: 45vh; */
     margin: auto;
     display: grid;
     grid-template-areas: 
