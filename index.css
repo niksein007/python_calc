@@ -12,9 +12,28 @@ body{
 
 #display{
     height: 60px;
-    background-color: rgb(178, 178, 199);
+    width: 46vw;
+    background-color: rgb(181, 181, 192);
+    padding: 5px;
+    /* margin-bottom: -26.5px; */
 
 }
+#inputs,#result{
+    height: 25px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: right;
+    padding: 5px;
+
+}
+#inputs{
+    font-size: small;
+}
+
+#result{
+
+}
+
 
 #display{grid-area: display;}
 #btn_dot{grid-area: dot;}
@@ -37,9 +56,13 @@ body{
 #btn_delete{grid-area: del;}
 
 .calculator{
-    width: 200px;
-    height: 300px;
+    max-width:47vw;
     margin: auto;
+    /* height: 300px; */
+    border: 1px solid black;
+    background-color: black;
+    padding: 1px;
+    margin-left: 30px;
     display: grid;
     grid-template-areas: 
     'display display display display'
@@ -49,4 +72,26 @@ body{
     'del zero plus minus'
     'del dot plus equals'
     ;
+}
+
+button{
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid white;
+    width:11.4vw ;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    /* margin: 0; */
+    transition: 0.4s;
+}
+
+button:hover{
+    background-color: rgb(53, 51, 51);
+}
+
+
+#btn_delete , #btn_plus{
+    height: auto;
 }
