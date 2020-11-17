@@ -19,7 +19,7 @@ display <= result
 btns_dict = {"dot":".","zero":"0","one":"1","two":"2","three":"3",
 "four":"4","five":"5","six":"6","seven":"7","eight":"8","nine":"9",
 "minus":"-","plus":"+","divide":"/","multiply":"*","equals":"=",
-"cancle":"C","delete":"Del"} #make a string list of cal buttons
+"cancel":"C","delete":"Del"} #make a string list of cal buttons
 
 #put display first to aviod the btns showing as elements
 output_list = [display] 
@@ -43,16 +43,21 @@ def logic(ev):
    symbols = '+-/*='## holds all possible math symbols
    len_symbols = len(symbols)
    count = 0
-   msg1 = 'please enter a valid input'
+   msg1 = 'invalid input!'
 
 
    if btn_value == 'C':
       inputs.text = ''
       result.text = '0'
 
+   elif btn_value == '.' and inputs.text == '':
+      inputs.text = '0.'
+   elif btn_value == '.' and btn_value in inputs.text:
+      pass
+
    elif btn_value == 'Del':
-      if inputs.text == msg1:
-         inputs.text = '0'
+      if inputs.text == msg1 or inputs.text == '0.':
+         inputs.text = ''
       else:
          inputs.text = inputs.text[:-1] ### slice off all chars except the last char
 
@@ -98,6 +103,7 @@ def logic(ev):
 ###loop through the dict and bind to click event
 ### add them to the output_list
 for key, value in btns_dict.items():
+
    button = html.BUTTON(value,id='btn_' + key )
    button.bind('click',logic)
    button.bind('mousedown',mousedown)

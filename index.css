@@ -12,10 +12,12 @@ body{
 
 #display{
     height: 60px;
-    width: 46vw;
+    /* width: 200px; */
+    margin: left;
     background-color: rgb(181, 181, 192);
+    border-radius: 2px;
     padding: 5px;
-    /* margin-bottom: -26.5px; */
+    margin-bottom: 5px;
 
 }
 #inputs,#result{
@@ -33,6 +35,56 @@ body{
 #result{
 
 }
+button{
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid white;
+    width:49px ;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    font-weight: small;
+    transition: 0.4s;
+}
+
+button:hover{
+    background-color: rgb(53, 51, 51);
+    border-color: gold;
+    /* border-style: double; */
+}
+
+
+#btn_delete , #btn_plus{
+    height: auto;
+}
+#btn_delete, #btn_dot,#btn_plus,#btn_equals{
+    border-bottom-width: 1.5px;
+    margin-bottom: 2px;
+}
+#btn_one, #btn_two,#btn_three,#btn_cancel{
+    border-top-width: 1.5px;
+}
+
+#btn_divide, #btn_multiply,#btn_minus,#btn_equals,#btn_dot{
+    font-size: 20px;
+  
+}
+
+#btn_plus{
+    font-size: xx-large;
+}
+
+#btn_dot{
+    height: 25px;
+    padding:0 0 29px 0;
+}
+#btn_multiply{
+    padding-top: 7px;
+}
+
+
+
 
 
 #display{grid-area: display;}
@@ -56,13 +108,15 @@ body{
 #btn_delete{grid-area: del;}
 
 .calculator{
-    max-width:47vw;
+    max-width:200px;
     margin: auto;
     /* height: 300px; */
     border: 1px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
     background-color: black;
-    padding: 1px;
-    margin-left: 30px;
+    padding: 0px;
+    /* margin-left: 30px; */
     display: grid;
     grid-template-areas: 
     'display display display display'
@@ -74,24 +128,3 @@ body{
     ;
 }
 
-button{
-    border-radius: 2px;
-    outline: none;
-    border: 1px solid white;
-    width:11.4vw ;
-    height: 30px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    text-align: center;
-    /* margin: 0; */
-    transition: 0.4s;
-}
-
-button:hover{
-    background-color: rgb(53, 51, 51);
-}
-
-
-#btn_delete , #btn_plus{
-    height: auto;
-}
