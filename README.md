@@ -1,1 +1,1 @@
-This is a program that builds a calculator using python language and brython compiler to display its functionality in a web browser
+This is a program that builds a calculator using python language and brython compiler to display its functionality in a web browser.

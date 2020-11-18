@@ -32,14 +32,11 @@ body{
     font-size: small;
 }
 
-#result{
-
-}
 button{
     border-radius: 2px;
     outline: none;
     border: 1px solid white;
-    width:49px ;
+    width:49.5px ;
     height: 30px;
     background-color: rgb(0, 0, 0);
     color: white;
@@ -104,6 +101,7 @@ button:hover{
 .calculator{
     max-width:200px;
     margin: auto;
+    margin-top: 100px;
     /* height: 300px; */
     border: 1px solid black;
     border-bottom: 2px solid black;
